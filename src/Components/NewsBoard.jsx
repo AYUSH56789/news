@@ -40,7 +40,7 @@ fetchData();
     return (
         <>
 <h2 className="d-flex justify-content-center p-4">Latest <span className="badge text-bg-success">  news</span> </h2>
- 
+ <div className='d-flex flex-wrap justify-content-center gap-3'>
            {state && state.map((news, index) => (
               <NewsItem
                     key={index}
@@ -50,6 +50,7 @@ fetchData();
                     url={news.url}
                 /> 
              ))}   
+    </div>
         </>
     )
 };
